@@ -43,6 +43,11 @@ $(document).ready(function() {
         type: "GET",
         url: SEARCH_URL + searchTerm,
         success: function(data) {
+
+          if (!data.list.item[0].ndbno) {
+            return;
+          }
+
           var ndbno = data.list.item[0].ndbno;
 
           $.ajax({
@@ -70,7 +75,7 @@ $(document).ready(function() {
               // </tr>
 
               $('tbody > tr').remove();
-              $('#results').append("<tr><td>" + name + "</td><td>" + carbs + "</td></tr>");
+              $('#results').append("<tr><td>" + name + "</td><td>" + carbs + "g</td></tr>");
 
 
               // for (item in nutrients_object) {
@@ -89,6 +94,8 @@ $(document).ready(function() {
             },
             error: function(jqXHR) {
               console.log("Error in second AJAX call.")
+              $('tbody > tr').remove();
+              $('#results').append("<tr><td>Not found.</td><td> </td></tr>");
               // $('li').remove();
               // $("#results").append("<li>" + jqXHR.responseText + "</li>");
             }
