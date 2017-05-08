@@ -5,4 +5,15 @@ For this application, AJAX requests are made to the [USDA National Nutrient Data
 
 
 ### TODO
-[] - test
+
+#### Features
+- [ ] retrieve additional nutritional information
+
+#### Visual
+- [ ] Option to display the information using diagrams, or the nutrition facts style label
+
+
+ <a href="https://upload.wikimedia.org/wikipedia/commons/2/2b/FDA_Nutrition_Facts_Label_2006.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/FDA_Nutrition_Facts_Label_2006.jpg" alight="left" height="350px" width="auto" ></a>
+  
+  
+  
